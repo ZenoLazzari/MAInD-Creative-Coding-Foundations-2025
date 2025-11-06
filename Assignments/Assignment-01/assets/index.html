@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title> Zeno's Assignment 01 </title>
+</head>
+
+   <body>
+
+    <img src="imgs/pngtree-hamburger-png-image_13094305.png" id="hamburger" alt="Hamburger">
+    <h1>Crea il tuo Hamburger!</h1>
+    <h2>Hai mai pensato che l'Hamburger migliore è quello pensato a posta per te?</h2>
+
+    <div class="story-container">
+        <div class="story-box">
+            <p>L'hamburger ha radici antiche nella cucina della carne. Fin dai primi tentativi di macinare carne e combinarla con pane, l'uomo ha cercato il gusto perfetto. Le origini moderne si collegano ai cuochi di New York e alle fiere americane del XIX secolo, dove il filetto di carne diventava protagonista in nuove forme.</p>
+        </div>
+        <div class="story-box">
+            <p>Con il tempo, l'hamburger si è evoluto, diventando simbolo di velocità e golosità. Dagli anni '50 in poi, catene e ristoranti hanno affinato le ricette, aggiungendo ingredienti e salse sempre più fantasiose, fino a trasformarlo in un'icona globale della cucina veloce ma gustosa.</p>
+        </div>
+    </div>
+
+    <div class="ingredient-container">
+        <div class="box">
+            <h3>Ingredienti disponibili</h3>
+            <button id="toggleAvailableView">Vista Griglia</button>
+            <ul id="availableIngredients">
+                <li>Bun</li>
+                <li>Carne</li>
+                <li>Formaggio</li>
+                <li>Insalata</li>
+                <li>Pomodoro</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>Crea il tuo hamburger</h3>
+            <p id="ingredientCounter">0/6 ingredienti scelti</p>
+            <input type="text" id="newIngredient" placeholder="Aggiungi nuovo ingrediente">
+            <button onclick="addIngredient()">Aggiungi</button>
+            <ul id="chosenIngredients">
+              
+            </ul>
+        </div>
+    </div>
+
+
+    <div style="height:50px;"></div>
+  <footer> Creato da Zeno Tamagni-Lazzari</footer>
