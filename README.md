@@ -1,40 +1,60 @@
-# MAInD-Creative-Coding-Foundations-2025
-MAInD Coding Course
-# About
+# Brief
+![Ciao](doc/Screenshot%202025-11-06%20095341.png)
+![Ciao](doc/Screenshot%202025-11-06%20095352.png)
+![Ciao](doc/Screenshot%202025-11-06%20095437.png)
 
-**Course name**: **Creative Coding Foundations**
+Starting from the concept of a pinboard, implement a web page that:
 
-**Course ID**: **ID102.01**
+- is responsive (properly layout for smartphone, tablet, and desktop)
+- allows the user to add and remove elements
+- allows the user to coustomize elements (i.e. colors, size)
+- allows the switch between two views (at least)
 
-**Teachers**: Marco Lurati, Giovanni Profeta
+Short project description:
+Interactive web app where users can create their custom hamburger by selecting or adding ingredients. Each ingredient can be edited, deleted, or categorized (e.g., spicy, vegan). The interface is responsive, featuring dynamic list/grid views and animated visual feedback.
 
-**Assistants**: Luca Draisci
+Function List
 
-# Goals
+1. updateCounter()
 
-***Acquire the fundamental knowledge of coding principles and terminology to be able to work in an interdisciplinary team in different design fields***
+Arguments: none
 
-## (how)
+Description: Calculates how many ingredients have been added to the chosenIngredients list. Dynamically updates the text inside the ingredientCounter element to display the current number of selected ingredients out of six maximum.
 
-*by individually practicing writing code following good practices and documenting it, using industry-standard development tools*
+Returns: void (does not return a value; only updates the UI).
 
-## What you will learn
+2. addIngredientToBox(name)
 
-- Foundational knowledge of programming concepts and coding principles applicable across various fields and applications
-- Fundamentals of web languages (HTML, CSS) with a primary focus on plain JavaScript
-- Skills to create interactive web interfaces with multimedia content
-- How to use industry-standard development tools like Visual Studio Code and GitHub
+Arguments: name (string) — the name of the ingredient to be added.
 
-## Description
+Description:
+Creates a new li element containing:
 
-The course aims to provide students with a broad introduction to coding, with a special emphasis on human-computer interaction.
+the ingredient name,
 
-It is based on the recent core web technologies (HTML, CSS and JavaScript) and the VS Code and Github tools. It offers hands-on experience with responsive web design implementation, DOM manipulation, API usage and I/O integration via the Canvas (for example, using the microphone).
+a dropdown select menu to choose a type (Normal, Spicy, Vegan, Important) that changes the background color,
 
-Each week, the students will learn and apply new programming principles and techniques in a one-day class that includes the following sessions: a brief individual written test covering all previous topics (which will be evaluated), a lecture on programming delivered by the lecturers, practical exercises supported by the teaching staff, and development of class assignments.
+an “Edit” button that lets the user rename the ingredient using a prompt(),
 
-The assignments and the course are designed to build programming experience for the remainder of the master’s program, and the brief written tests allow students to personally assess their understanding and mastery of core fundamental topics.
+a “Delete” button that removes the ingredient from the list and updates the counter.
+If the total number of ingredients exceeds six, an alert message appears and no new ingredient is added.
 
-## Evaluation
+Returns: void
 
-Every assignment and test is evaluated according to specific, shared criteria; the final grade is the average of these evaluations
+3. addIngredient()
+
+Arguments: none
+
+Description:
+Retrieves the value entered by the user in the #newIngredient input field. If the value is not empty, it passes it to addIngredientToBox(name) to add it to the custom burger list, then clears the input field.
+
+Returns: void
+
+4. toggleAvailableView() (triggered by an event listener)
+
+Arguments: none
+
+Description:
+Toggles the CSS class grid-view on the #availableIngredients list, switching between list and grid display modes. Also updates the button text to show either “Grid View” or “List View” depending on the current layout.
+
+Returns: void
